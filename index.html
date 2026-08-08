@@ -56,6 +56,6 @@
     }
   </script>
 <script>
-(()=>{})();
+(()=>{const journey=document.querySelector('.journey');if(!journey||!matchMedia('(max-width:780px)').matches)return;const source=journey.querySelector('.journey-inner>.journey-visual');const steps=[...journey.querySelectorAll('.journey-copy>article')];if(!source||!steps.length)return;source.classList.add('desktop-source');steps.forEach(step=>{const demo=source.cloneNode(true);demo.classList.remove('desktop-source');demo.classList.add('mobile-stage');demo.dataset.state=step.dataset.state;step.append(demo)});journey.classList.add('mobile-flow-ready')})();
 </script></body>
 </html>
